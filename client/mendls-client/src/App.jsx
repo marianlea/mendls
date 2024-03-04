@@ -7,15 +7,21 @@ import Pastries from './utils/mendls_api'
 function App() {
 
   const [pastries, setPastries] = useState([])
+  const [basket, setBasket] = useState([])
   
-  // useEffect(()=>{
-  //   Pastries.all()
-  //     .then(console.log(pastries))
-  // }, [])
+  useEffect(()=>{
+    Pastries.all()
+      .then(setPastries)
+  }, [])
+
+  function addToBasket(pastry) {
+    setBasket([...basket, pastry])
+  }
+  console.log(basket);
 
   return (
     <main>
-      <PastriesList pastries={pastries} />
+      <PastriesList pastries={pastries} onBasketChange={addToBasket} />
     </main>
   )
 }
