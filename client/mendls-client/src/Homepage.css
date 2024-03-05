@@ -1,0 +1,105 @@
+.homepage {
+  background-color: #FFC5E8;
+  background-image: url('./assets/noise.png');
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+  font-family: 'Della-Robia';
+}
+
+.homepage .center {
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.homepage .right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-items: flex-end;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.homepage .left {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-items: flex-start;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.homepage .center img {
+  width: 30rem;
+}
+
+.homepage .left img {
+  display: flex;
+}
+
+.homepage .right img {
+  display: flex;
+}
+
+.homepage .whiskCream {
+  width: 14rem;
+}
+
+.homepage .spatulaAndBowl {
+  margin-top: -7rem;
+  width: 14rem;
+}
+
+.homepage .spoon {
+  width: 7rem;
+  margin-top: -2rem;
+}
+
+.homepage .leftPin {
+  width: 14rem;
+  margin-top: -6.5rem;
+}
+
+.homepage .mitten {
+  width: 14rem;
+}
+
+.homepage .spoonRight {
+  width: 7rem;
+  margin-right: 6rem;
+  margin-top: -5rem;
+  transform: scaleX(-1);
+}
+
+.homepage .whiskPin {
+  width: 14rem;
+  margin-top: -5rem;
+}
+
+.homepage .bowl {
+  width: 200px;
+  margin-top: -50px;
+}
+
+.homepage .shop-btn {
+  padding: 0.5rem;
+  width: 5rem;
+  background-color: #D20F3E;
+  color: #FFFAF0;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Della-Robia';
+}
+.homepage .shop-btn:hover {
+  background-color: #c84f6b;
+}
+
+.homepage .arrow-down {
+  color: #D20F3E;
+  font-size: 1.5rem;
+}

@@ -4,6 +4,8 @@ import PastriesList from './PastriesList'
 import BasketList from './BasketList'
 import { useEffect } from 'react'
 import Pastries from './utils/mendls_api'
+import NavBar from './NavBar'
+import Homepage from './Homepage'
 
 
 function App() {
@@ -58,6 +60,8 @@ function App() {
 
   return (
     <main>
+      <NavBar />
+      <Homepage />
       <PastriesList pastries={pastries} basket={basket} onBasketChange={addToBasket} />
       <BasketList basket={basket} onBasketChange={addToBasket} />
     </main>

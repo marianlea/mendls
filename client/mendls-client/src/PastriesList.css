@@ -1,3 +1,8 @@
+.pastries-list {
+    font-family: 'Della-Robia';
+    background-color: #FFFAF0;
+}
+
 .pastries-list ul {
     list-style-type: none;
 }

@@ -1,0 +1,29 @@
+.nav-bar {
+  background-color: transparent;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  color: #D20F3E;
+  font-size: 0.8rem;
+  font-family: 'Della-Robia';
+  padding: 0 1rem;
+  width: 100%;
+  transition: background-color 0.5s ease;
+}
+
+.nav-bar .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.nav-bar .logo {
+  width: 8rem;
+  padding-left: 1rem;
+}
+
+.nav-bar .basket-icon {
+  width: 25px;
+  padding-bottom: 5px;
+}
