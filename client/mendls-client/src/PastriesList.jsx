@@ -7,9 +7,10 @@ export default function PastriesList({ pastries, basket, onBasketChange }) {
     const [formData, setFormData] = useState({})
 
     function handleFormChange(e, pastry) {
-        setFormData((prev) => ({...prev,...pastry, quantity: e.target.value,  }))
+        setFormData((prev) => ({...prev, ...pastry, quantity: e.target.value,  }))
     }
 
+    console.log(formData);
     function handleBasketChange(e) {
         e.preventDefault()
         onBasketChange(formData)
@@ -20,7 +21,7 @@ export default function PastriesList({ pastries, basket, onBasketChange }) {
             <ul>
                 {pastries.map(pastry =>{
                     return <li key={pastry.id}>
-                        <PastryItem pastry={pastry} />
+                        <PastryItem  pastry={pastry} />
                         <form onSubmit={handleBasketChange} >
                             <input
                                 type="number"

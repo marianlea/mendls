@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import PastriesList from './PastriesList'
+import BasketList from './BasketList'
 import { useEffect } from 'react'
 import Pastries from './utils/mendls_api'
+
 
 function App() {
 
@@ -25,7 +27,7 @@ function App() {
 
   // function addToBasket(pastry) {
   //   const existingPastry = basket.filter(item => item.id === pastry.id);
-  //   const newBasket =
+  //   const updatedBasket =
   //     !!existingPastry.length 
   //     ? basket.map(item => {
   //       if (item.id === pastry.id){
@@ -34,7 +36,7 @@ function App() {
   //       return item
   //     }) 
   //     : [...basket, pastry];
-  //     setBasket(newBasket)
+  //     setBasket(updatedBasket)
   // }
 
   function addToBasket(pastry) {
@@ -57,6 +59,7 @@ function App() {
   return (
     <main>
       <PastriesList pastries={pastries} basket={basket} onBasketChange={addToBasket} />
+      <BasketList basket={basket} onBasketChange={addToBasket} />
     </main>
   )
 }
