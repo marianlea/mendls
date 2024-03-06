@@ -4,6 +4,7 @@ import noise from '../assets/noise.png'
 import basketIcon from '../assets/basket.png'
 import { Link as LinkRouter } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
+import { useEffect, useState } from 'react';
 
 
 
@@ -13,6 +14,8 @@ export default function NavBar({
   location
 }) {
 
+  const [background, setBackground] = useState({backgroundColor: 'transparent'})
+
   function scrollToTop() {
     window.scrollTo({top:0,left:0, behavior: 'smooth'})
   }
@@ -21,17 +24,35 @@ export default function NavBar({
     setIsBasketVisible(true)
   }
 
-  let background 
-  location.hash === '#shop'
-  ? background = {
-      color: "#FFFAF0",
-    }
-  : background = {
-      color: "transparent",
-    }
+  useEffect(() => {
+    const handleScroll = () => {
+      if ((window.scrollY >= 539 && location.pathname === '/') ||     location.hash === '#shop'){
+        setBackground(
+          {
+            backgroundColor: "#FFFAF0",
+          } 
+        )
+      } else {
+        setBackground(
+          {
+            backgroundColor: "transparent",
+          } 
+        )
+      }
+    };
+
+    // Add event listener when component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+      
+  }, [])
 
   return (
-      <nav className="nav-bar" style={{backgroundColor:background.color }}>
+      <nav className="nav-bar" style={background}>
         <LinkRouter to='/' onClick={scrollToTop}>
           <img className="logo" src={logo} alt="" />
         </LinkRouter>
