@@ -1,6 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   font-family: 'Matchbox-Lettre';
   width: 100vw;
+}
+
+.App .wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 

@@ -1,0 +1,50 @@
+.about {
+  font-family: 'Della-Robia';
+  background-color: #FFC5E8;
+  background-image: url('../assets/noise.png');
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #D20F3E;
+}
+
+.about .staff {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about .photo{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.about .herr-mendl {
+  background-image: url('../assets/herr-mendl.gif');
+  background-position-x: center;
+  background-position-y: 0%;
+}
+.about .agatha {
+  background-image: url('../assets/agatha.gif');
+  background-position-x: center;
+  background-position-y: 10%;
+}
+
+.about .description {
+  width: 20rem;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+.about h3 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.about p {
+  font-size: 0.8rem;
+}

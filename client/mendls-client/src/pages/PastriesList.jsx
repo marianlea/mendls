@@ -13,11 +13,16 @@ export default function PastriesList({ pastries, basket, onBasketChange }) {
     console.log(formData);
     function handleBasketChange(e) {
         e.preventDefault()
+        if (!formData?.quantity){
+            alert('Enter item quantity');
+            return;
+        }
         onBasketChange(formData)
     }
 
     return (
-        <section className="pastries-list">
+        <div className="pastries-list" id="shop">
+            <h5 className='pastries-title'>PASTRIES</h5>
             <ul>
                 {pastries.map(pastry =>{
                     return <li key={pastry.id}>
@@ -31,11 +36,11 @@ export default function PastriesList({ pastries, basket, onBasketChange }) {
                                 min="1"
 
                             />
-                            <button>add to basket</button>
+                            <button className='add-btn'>add to basket</button>
                         </form>
                     </li>
                 })}
             </ul>
-        </section>
+        </div>
     )
 }

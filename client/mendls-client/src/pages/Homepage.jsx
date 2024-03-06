@@ -1,18 +1,20 @@
+import {useEffect} from 'react'
 import './Homepage.css'
-import logo from './assets/logo-large.png'
-import whiskCream from './assets/whiskCream.png'
-import bowl from './assets/bowl.png'
-import spoon from './assets/spoons.png'
-import spatulaAndBowl from './assets/spatulaBowl.png'
-import leftPin from './assets/leftPin.png'
-import mitten from './assets/mitten.png'
-import whiskAndPin from './assets/whiskAndPin.png'
+import { Link as ScrollLink } from 'react-scroll'
+import logo from '../assets/logo-large.png'
+import whiskCream from '../assets/whiskCream.png'
+import bowl from '../assets/bowl.png'
+import spoon from '../assets/spoons.png'
+import spatulaAndBowl from '../assets/spatulaBowl.png'
+import leftPin from '../assets/leftPin.png'
+import mitten from '../assets/mitten.png'
+import whiskAndPin from '../assets/whiskAndPin.png';
+import { NavHashLink } from 'react-router-hash-link';
 
 export default function Homepage() {
 
-
   return (
-    <section className="homepage">
+    <div className="homepage" id="homepage">
       <div className='left'>
         <img className='whiskCream' src={whiskCream} alt="" />
         <img className='spatulaAndBowl' src={spatulaAndBowl} alt="" />
@@ -21,8 +23,7 @@ export default function Homepage() {
       </div>
       <div className='center'>
         <img className='main-logo' src={logo} alt="" />
-        <button className='shop-btn'>SHOP</button>
-        <h5 className='arrow-down'>⌄</h5>
+        <NavHashLink  to='/#shop'  className='shop-btn'>SHOP</NavHashLink  >
       </div>
       <div className='right'>
         <img className='mitten' src={mitten} alt="" />
@@ -30,6 +31,6 @@ export default function Homepage() {
         <img className='whiskPin' src={whiskAndPin} alt="" />
         <img className='bowl' src={bowl} alt="" />
       </div>
-    </section>
+    </div>
   )
 }

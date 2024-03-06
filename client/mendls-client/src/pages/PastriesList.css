@@ -1,0 +1,64 @@
+.pastries-list {
+    font-family: 'Della-Robia';
+    background-color: #FFFAF0;
+    background-image: url('../assets/noise.png');
+    color: #D20F3E;
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pastries-list .pastries-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+}
+
+.pastries-list ul {
+    list-style-type: none;
+    border: 2px dotted powderblue;
+    width: 50%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.pastries-list li {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+    gap: 0.7rem;
+}
+
+.pastries-list form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pastries-list input {
+    width: 3rem;
+    font-family: "Alex Brush", cursive;
+    color: #545454;
+    background-color: #FFFAF0;
+    background-image: url('../assets/noise.png');
+    border: none;
+    border-bottom: 1px dotted #545454;
+    text-align: center;
+}
+
+.pastries-list .add-btn {
+    font-family: 'Della-Robia';
+    color: #FFFAF0;
+    background-color: #D20F3E;
+    border: none;
+    font-size: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 0.8rem;
+}
+.pastries-list .add-btn:hover {
+    background-color: #c84f6b;
+}

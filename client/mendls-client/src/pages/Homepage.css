@@ -1,9 +1,8 @@
 .homepage {
   background-color: #FFC5E8;
-  background-image: url('./assets/noise.png');
+  background-image: url('../assets/noise.png');
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 100vh;
   font-family: 'Della-Robia';
 }
 
@@ -97,9 +96,4 @@
 }
 .homepage .shop-btn:hover {
   background-color: #c84f6b;
-}
-
-.homepage .arrow-down {
-  color: #D20F3E;
-  font-size: 1.5rem;
 }

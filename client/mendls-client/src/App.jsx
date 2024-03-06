@@ -1,20 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-import PastriesList from './PastriesList'
-import BasketList from './BasketList'
-import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import PastriesList from './pages/PastriesList'
+import BasketList from './pages/BasketList'
 import Pastries from './utils/mendls_api'
-import NavBar from './NavBar'
-import Homepage from './Homepage'
+import NavBar from './components/NavBar'
+import Homepage from './pages/Homepage'
+import About from './pages/About'
+import Drawer from '@mui/material/Drawer';
+import noise from './assets/noise.png';
 
+const drawerWidth = 450;
 
 function App() {
-
   const [pastries, setPastries] = useState([])
-  // const [basket, setBasket] = useState( typeof savedBasket === 'object' ? savedBasket : [])
   const savedBasket = JSON.parse(localStorage.getItem('basket'))
-  const [basket, setBasket] = useState(savedBasket || []);
-  
+  const [basket, setBasket] = useState(savedBasket || [])
+  const [isBasketVisible, setIsBasketVisible] = useState(false)
+
   
   useEffect(()=>{
     Pastries.all()
@@ -26,20 +29,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem('basket', JSON.stringify(basket))
   }, [basket])
-
-  // function addToBasket(pastry) {
-  //   const existingPastry = basket.filter(item => item.id === pastry.id);
-  //   const updatedBasket =
-  //     !!existingPastry.length 
-  //     ? basket.map(item => {
-  //       if (item.id === pastry.id){
-  //         return {...existingPastry, ...pastry}
-  //       } 
-  //       return item
-  //     }) 
-  //     : [...basket, pastry];
-  //     setBasket(updatedBasket)
-  // }
 
   function addToBasket(pastry) {
     const existingPastryIndex = basket.findIndex(item => item.id === pastry.id);
@@ -56,15 +45,44 @@ function App() {
       setBasket([...basket, pastry]);
     }
   }
-  
+
+  function removeItemFromBasket(pastry) {
+    setBasket((prev) => prev.filter(item => pastry.id !== item.id ))
+  }
 
   return (
-    <main>
-      <NavBar />
-      <Homepage />
-      <PastriesList pastries={pastries} basket={basket} onBasketChange={addToBasket} />
-      <BasketList basket={basket} onBasketChange={addToBasket} />
-    </main>
+    <div>
+      <NavBar setIsBasketVisible={setIsBasketVisible} basket={basket}/>
+      <Routes>
+        <Route path='/' element={
+          <>
+            <Homepage />
+            <PastriesList pastries={pastries} basket={basket} onBasketChange={addToBasket} />
+          </>
+        } />
+        <Route path='/about' element={<About />} />
+      </Routes>
+      <Drawer 
+        open={isBasketVisible} 
+        anchor="right"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+            flexShrink: 0,
+            backgroundImage: `url(${noise})`, // Add your image path here
+            // backgroundRepeat: 'no-repeat',
+            // backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundColor: '#FFFAF0'
+          },
+        }}
+      >
+        <BasketList basket={basket} onBasketChange={addToBasket} setIsBasketVisible={setIsBasketVisible} removeItemFromBasket={removeItemFromBasket}/>
+      </Drawer>
+    </div>
   )
 }
 
