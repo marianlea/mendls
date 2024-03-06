@@ -25,15 +25,13 @@ export default function NavBar({
   location.hash === '#shop'
   ? background = {
       color: "#FFFAF0",
-      image: noise
     }
   : background = {
       color: "transparent",
-      image: null
     }
 
   return (
-      <nav className="nav-bar" style={{backgroundColor:background.color, backgroundImage: `url(${background.image})` }}>
+      <nav className="nav-bar" style={{backgroundColor:background.color }}>
         <LinkRouter to='/' onClick={scrollToTop}>
           <img className="logo" src={logo} alt="" />
         </LinkRouter>
@@ -45,7 +43,7 @@ export default function NavBar({
         <div style={{position: 'relative'}}>
           <img className="basket-icon link" src={basketIcon} onClick={handleBasketClick} alt="" />
           {!!basket.length && 
-            <p style={{height:15, width: 15, borderRadius: 7.5, backgroundColor: '#D20F3E', color: '#fff', fontSize: 7, display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: -6, right: -7}}>
+            <p className="quantity">
               {basket
                 .map(pastry => Number(pastry.quantity))
                 .reduce((totalQuantity , quantity) => totalQuantity + quantity, 0)

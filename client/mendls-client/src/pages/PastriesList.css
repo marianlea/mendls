@@ -1,7 +1,7 @@
 .pastries-list {
     font-family: 'Della-Robia';
     background-color: #FFFAF0;
-    background-image: url('../assets/noise.png');
+    /* background-image: url('../assets/noise.png'); */
     color: #D20F3E;
     padding-top: 7rem;
     display: flex;
@@ -43,7 +43,7 @@
     font-family: "Alex Brush", cursive;
     color: #545454;
     background-color: #FFFAF0;
-    background-image: url('../assets/noise.png');
+    /* background-image: url('../assets/noise.png'); */
     border: none;
     border-bottom: 1px dotted #545454;
     text-align: center;

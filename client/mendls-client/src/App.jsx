@@ -10,6 +10,9 @@ import About from './pages/About'
 import Drawer from '@mui/material/Drawer';
 import noise from './assets/noise.png';
 import { useLocation } from 'react-router-dom'
+import PaymentSuccess from './pages/PaymentSuccess'
+import PaymentCancel from './pages/PaymentCancel'
+import Checkout from './pages/Checkout'
 
 const drawerWidth = 450;
 
@@ -67,6 +70,9 @@ function App() {
           </>
         } />
         <Route path='/about' element={<About />} />
+        <Route path='/success' element={<PaymentSuccess />} />
+        <Route path='/cancel' element={<PaymentCancel />} />
+        <Route path='/checkout' element={<Checkout basket={basket} />} />
       </Routes>
       <Drawer 
         open={isBasketVisible} 
@@ -88,6 +94,7 @@ function App() {
       >
         <BasketList basket={basket} onBasketChange={addToBasket} setIsBasketVisible={setIsBasketVisible} removeItemFromBasket={removeItemFromBasket}/>
       </Drawer>
+
     </div>
   )
 }
