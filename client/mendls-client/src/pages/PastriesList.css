@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-.pastries-list input {
+.pastries-list input[type=number] {
     width: 3rem;
     font-family: "Alex Brush", cursive;
     color: #545454;
@@ -48,6 +48,19 @@
     border-bottom: 1px dotted #545454;
     text-align: center;
 }
+.pastries-list input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    background-image: url('../assets/arrows.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    display:block;
+    width:8px;
+    color: #333;
+    text-align:center;
+    position:relative;
+}    
 
 .pastries-list .add-btn {
     font-family: 'Della-Robia';

@@ -68,11 +68,10 @@
   width: 14rem;
 }
 
-.homepage .spoonRight {
-  width: 7rem;
+.homepage .box {
+  width: 6rem;
   margin-right: 6rem;
   margin-top: -5rem;
-  transform: scaleX(-1);
 }
 
 .homepage .whiskPin {
@@ -93,7 +92,51 @@
   border: none;
   border-radius: 1rem;
   font-family: 'Della-Robia';
+  text-decoration: none;
 }
 .homepage .shop-btn:hover {
   background-color: #c84f6b;
+  transform: scale(1.2);
+
+}
+
+@keyframes slideIn {
+  from{
+    transform: translateX(-100%)
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in1 {
+  animation: slideIn 1200ms ease;
+}
+
+.slide-in2 {
+  animation: slideIn 500ms ease;
+}
+
+.slide-in3 {
+  animation: slideIn 1700ms ease;
+}
+
+
+@keyframes slideOut {
+  from{
+    transform: translateX(100%)
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-out1 {
+  animation: slideOut 1200ms ease;
+}
+.slide-out2 {
+  animation: slideOut 800ms ease;
+}
+.slide-out13 {
+  animation: slideOut 1000ms ease;
 }

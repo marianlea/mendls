@@ -9,6 +9,7 @@ import Homepage from './pages/Homepage'
 import About from './pages/About'
 import Drawer from '@mui/material/Drawer';
 import noise from './assets/noise.png';
+import { useLocation } from 'react-router-dom'
 
 const drawerWidth = 450;
 
@@ -17,6 +18,7 @@ function App() {
   const savedBasket = JSON.parse(localStorage.getItem('basket'))
   const [basket, setBasket] = useState(savedBasket || [])
   const [isBasketVisible, setIsBasketVisible] = useState(false)
+  const location = useLocation()
 
   
   useEffect(()=>{
@@ -52,7 +54,11 @@ function App() {
 
   return (
     <div>
-      <NavBar setIsBasketVisible={setIsBasketVisible} basket={basket}/>
+      <NavBar 
+        setIsBasketVisible={setIsBasketVisible} 
+        basket={basket}
+        location ={location} 
+      />
       <Routes>
         <Route path='/' element={
           <>
