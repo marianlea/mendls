@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import './ContactPage.css'
 
 export default function ContactPage() {
@@ -25,6 +26,7 @@ export default function ContactPage() {
           mendlspatisserie@wes.co
         </p>
       </div>
+      <Footer color='#FFFAF0' image='none' visible='visible' />
     </section>
   )
 }

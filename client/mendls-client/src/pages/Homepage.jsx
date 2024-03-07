@@ -65,7 +65,7 @@ export default function Homepage() {
       <div className='center'>
         <img className='main-logo' src={logo} alt="" />
         <p className='store-hours'>STORE HOURS 7AM TO 3PM</p>
-        <NavHashLink  to='/#shop'  className='shop-btn'>SHOP</NavHashLink  >
+        {/* <NavHashLink  to='/#shop'  className='shop-btn'>SHOP</NavHashLink  > */}
       </div>
       <div className='right'>
         <img className={`mitten ${slideClass.slideOutOne}`} src={mitten} alt="" />

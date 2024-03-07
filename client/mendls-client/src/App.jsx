@@ -113,7 +113,6 @@ function App() {
       >
         <BasketList basket={basket} onBasketChange={addToBasket} setIsBasketVisible={setIsBasketVisible} removeItemFromBasket={removeItemFromBasket}/>
       </Drawer>
-
     </div>
   )
 }
