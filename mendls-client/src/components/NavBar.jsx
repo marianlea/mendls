@@ -27,7 +27,7 @@ export default function NavBar({
 
   useEffect(() => {
     const handleScroll = () => {
-      if ((window.scrollY >= 539 && location.pathname === '/') ||     location.hash === '#shop'){
+      if ((window.scrollY >= 539 && location.pathname === '/') || location.hash === '#shop'){
         setBackground(
           {
             backgroundColor: "#FFFAF0",
