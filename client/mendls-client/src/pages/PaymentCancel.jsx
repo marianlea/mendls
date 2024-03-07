@@ -8,7 +8,7 @@ export default function PaymentCancel({ }) {
     <section className='payment'>
       <div className="message">
         <p>Sorry, your payment was declined.</p>
-        <p>Please try again with a valid card.</p>
+        <p>Please try again.</p>
       </div>
       <Footer color='#FFFAF0' image='none' />
     </section>

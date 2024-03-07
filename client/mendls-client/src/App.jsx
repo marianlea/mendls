@@ -16,7 +16,7 @@ import Checkout from './pages/Checkout'
 import ContactPage from './pages/ContactPage'
 import Pastry from './pages/Pastry'
 
-const drawerWidth = 450;
+const drawerWidth = 500;
 
 function App() {
   const [pastries, setPastries] = useState([])

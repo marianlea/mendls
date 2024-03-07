@@ -37,7 +37,12 @@ export default function BasketList({ basket, onBasketChange, setIsBasketVisible,
       <ul>
           {basket.map(pastry =>{
               return !!pastry.quantity && <li key={`${pastry.id}-basket`} className="basket-item" >
-                  <PastryItem  className="item" pastry={pastry} />
+                  <PastryItem  
+                    className="item" 
+                    pastry={pastry}
+                    titleSize='1rem'
+                    imageSize='3rem'
+                    spanSize='0.7rem' />
                   <section className="form">
                     <input
                         className="quantity"
@@ -70,7 +75,7 @@ export default function BasketList({ basket, onBasketChange, setIsBasketVisible,
         </span>
       </section>
       <div className="checkout-basket">
-        <p>* shipping fee calculated at checkout</p>
+        <p>* delivery flat rate of $6 added at checkout</p>
         <LinkRouter to='/checkout' className="checkout-btn" onClick={handleBasketClose}>checkout</LinkRouter>
       </div>
     </div>

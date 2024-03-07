@@ -9,11 +9,12 @@
   text-align: center;
   height: 100vh;
   color: #D20F3E;
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .payment img {
-  width: 150px;
+  width: 12rem;
+  margin-bottom: 1rem;
 }
 
 .payment p {

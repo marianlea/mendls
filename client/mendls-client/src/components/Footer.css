@@ -1,5 +1,5 @@
 .footer {
-  height: 3rem;
+  height: 4.5rem;
   width: 100%;
   position: fixed;
   left: 0;
@@ -10,7 +10,7 @@
 .footer .link {
   text-decoration: none;
   letter-spacing: 2px;
-  font-size: 8px;
+  font-size: 0.8rem;
   color: #D20F3E;
   margin-right: 20px;
   font-family: 'Della-Robia';

@@ -93,3 +93,7 @@
   border-radius: 10px;
   font-family: 'Della-Robia';
 }
+
+.checkout .footer {
+  padding-left: 3rem;
+}

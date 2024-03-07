@@ -30,8 +30,8 @@
 }
 
 .homepage .center img {
-  width: 30rem;
-  margin-top: 4rem;
+  width: 45rem;
+  margin-top: 7rem;
 }
 
 .homepage .left img {
@@ -43,64 +43,49 @@
 }
 
 .homepage .whiskCream {
-  width: 14rem;
+  width: 19rem;
 }
 
 .homepage .spatulaAndBowl {
-  margin-top: -7rem;
-  width: 14rem;
+  margin-top: -9rem;
+  width: 19rem;
 }
 
 .homepage .spoon {
-  width: 7rem;
+  width: 10rem;
   margin-top: -2rem;
 }
 
 .homepage .leftPin {
-  width: 14rem;
-  margin-top: -6.5rem;
+  width: 19rem;
+  margin-top: -8.5rem;
 }
 
 .homepage .mitten {
-  width: 14rem;
+  width: 19rem;
 }
 
 .homepage .box {
-  width: 6rem;
-  margin-right: 6rem;
-  margin-top: -5rem;
+  width: 8rem;
+  margin-right: 8rem;
+  margin-top: -7rem;
 }
 
 .homepage .whiskPin {
-  width: 14rem;
-  margin-top: -5rem;
+  width: 19rem;
+  margin-top: -7rem;
 }
 
 .homepage .bowl {
-  width: 200px;
+  width: 19rem;
   margin-top: -50px;
 }
 
 .homepage .store-hours {
-  font-size: 10px;
+  font-size: 1rem;
   color: #D20F3E;
   font-family: 'Matchbox-Lettre';
   margin: 2rem 0 1rem
-}
-
-.homepage .shop-btn {
-  padding: 0.3rem 2rem;
-  background-color: #D20F3E;
-  color: #FFFAF0;
-  border: none;
-  border-radius: 1rem;
-  font-family: 'Della-Robia';
-  text-decoration: none;
-  font-size: 12px;
-}
-.homepage .shop-btn:hover {
-  background-color: #c84f6b;
-  transform: scale(1.2);
 }
 
 

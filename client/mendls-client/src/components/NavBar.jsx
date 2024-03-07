@@ -4,6 +4,7 @@ import basketIcon from '../assets/basket.png'
 import { Link as LinkRouter } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { useEffect, useState } from 'react';
+import monochrome from '../assets/monochrome.png'
 
 
 
@@ -30,6 +31,7 @@ export default function NavBar({
         setBackground(
           {
             backgroundColor: "#FFFAF0",
+            backgroundImage: `url(${monochrome})`
           } 
         )
         setFooterIsVisible('visible') 

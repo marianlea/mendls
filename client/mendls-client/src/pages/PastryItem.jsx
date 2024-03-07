@@ -4,13 +4,18 @@ import { Link } from 'react-router-dom'
 
 
 
-export default function PastryItem({ pastry }) {
+export default function PastryItem({ pastry, spanSize, imageSize, titleSize }) {
     let imageUrl = getPastryImage(pastry)
     
     return (
         <section className="pastry-item">
-            <article className="pastry">
-                <img src={imageUrl} alt="" />
+            <article 
+                className="pastry"
+                style={{fontSize: titleSize}}>
+                <img 
+                    src={imageUrl} 
+                    alt=""
+                    style={{width: imageSize}} />
                 <Link 
                     to={`/shop/${pastry.title}`}
                     className='link'
@@ -19,7 +24,7 @@ export default function PastryItem({ pastry }) {
                 </Link>
                 <section className='pastry-price'>
                     <h5>$ {pastry.price}</h5>
-                    <span>x</span>
+                    <span style={{fontSize: spanSize}}>x</span>
                 </section>
             </article>
         </section>

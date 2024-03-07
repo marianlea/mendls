@@ -43,42 +43,6 @@ const pastries = [
     }
 ]
 
-
-// const orders = [
-//     {
-//         customerEmail: "teresitabaldevieso@gmail.com",
-//         deliveryAddress: { unitNumber: 1, street: '39 Bellevue Parade', suburb: 'Hurstville', state: 'NSW', postcode: 2220 },
-//         orderDate: new Date(),
-//         deliveryDate: "",
-//         status: "preparing",
-//         items: 
-//             [
-//                 {
-//                     productId: ObjectId("65e3ed1237c0bfb5cdf149c1"),
-//                     title: 'Courtesan au Chocolat',
-//                     quantity: 2,
-//                     price: 9.50
-//                 },
-//                 {
-//                     productId: ObjectId("65e3edd037c0bfb5cdf149c5"),
-//                     title: 'Canelés',
-//                     quantity: 3,
-//                     price: 4.20
-//                 },
-//                 {
-//                     productId: ObjectId("65e3edd037c0bfb5cdf149c6"),
-//                     title: 'Gâteau aux Framboises',
-//                     quantity: 1,
-//                     price: 8.90
-//                 }
-//             ],
-//         totalAmount: { orderTotal: 36.81, taxes: 3.69, deliveryFee: 9.00},
-//         paymentMethod: "",
-//         createdAt: "",
-//         updatedAt: ""
-//     }
-// ]
-
 function createSQL() {
     let sql = ''
     

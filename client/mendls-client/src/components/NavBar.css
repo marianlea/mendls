@@ -4,12 +4,10 @@
   display: grid;
   grid-template-columns: 2fr 1.5fr;
   color: #D20F3E;
-  font-size: 0.8rem;
   font-family: 'Della-Robia';
   padding: 0 1rem;
   width: 100%;
   transition: background-color 0.5s ease;
-
 }
 
 .nav-bar .links {
@@ -17,6 +15,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+  font-family: 'Matchbox-Lettre';
+  font-size: 1.5rem;
 }
 
 .nav-bar .link {
@@ -29,25 +29,26 @@
 }
 
 .nav-bar .logo {
-  width: 8rem;
+  width: 12rem;
   padding-left: 1rem;
 }
 
 .nav-bar .basket-icon {
-  width: 25px;
+  width: 2.5rem;
   padding-bottom: 5px;
 }
 
 .nav-bar .quantity {
-  height: 15px; 
-  width: 15px; 
-  border-radius: 7.5px; 
+  height: 1.5rem; 
+  width: 1.5rem; 
+  border-radius: 50%; 
   background-color: #D20F3E; 
   color: #FFFAF0; 
-  font-size: 7px; 
+  font-size: 0.7rem; 
   display: flex; 
   justify-content: center; 
-  align-items: center; 
+  align-items: center;
+  text-align: center;
   position: absolute; 
   top: -6px; 
   right: -7px;

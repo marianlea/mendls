@@ -10,10 +10,6 @@
     justify-content: center;
 }
 
-.pastry-item img {
-    width: 60px;
-}
-
 .pastry-item .link {
     color: #D20F3E;
     text-decoration: none;
@@ -28,5 +24,4 @@
 
 .pastry-item .pastry-price span {
     text-align: right;
-    font-size: 0.8rem;
 }

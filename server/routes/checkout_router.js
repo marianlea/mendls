@@ -37,6 +37,9 @@ router.post('/api/create-checkout-session', async (req, res) => {
     client_reference_id: products.cartId,
     line_items: lineItems,
     mode: 'payment',
+    shipping_options: [
+      {shipping_rate: 'shr_1Ora7kJMehcHOqCVv2qp6SgU'}
+    ],
     success_url: 'http://localhost:5173/success',
     cancel_url: 'http://localhost:5173/cancel'
   })

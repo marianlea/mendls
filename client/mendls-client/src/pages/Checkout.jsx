@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './Checkout.css'
 import { v1 as uuidv1 } from 'uuid';
 import { loadStripe } from '@stripe/stripe-js'
+import Footer from '../components/Footer';
 
 
 
@@ -99,6 +100,7 @@ export default function Checkout({ basket }) {
           </div>
         </form>
       </div>
+      <Footer className="footer" color='#FFFAF0' image='none' visible='visible' />
     </section>
   )
 }

@@ -1,28 +1,28 @@
 .pastries-list {
     font-family: 'Della-Robia';
     background-color: #FFFAF0;
-    /* background-image: url('../assets/noise.png'); */
+    background-image: url('../assets/monochrome.png');
     color: #D20F3E;
-    padding-top: 7rem;
+    padding-top: 11rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 5rem;
 }
 
 .pastries-list .pastries-title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
-
 }
 
 .pastries-list ul {
     list-style-type: none;
     border: 2px dotted powderblue;
     width: 50%;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 3rem;
+    margin-bottom: 5rem;
 }
 
 .pastries-list li {
@@ -38,13 +38,14 @@
 }
 
 .pastries-list input[type=number] {
-    width: 3rem;
+    width: 4rem;
     font-family: "Alex Brush", cursive;
     color: #545454;
     background-color: transparent;
     border: none;
     border-bottom: 1px dotted #545454;
     text-align: center;
+    font-size: 1.5rem;
 }
 .pastries-list input:focus {
     outline: none;
@@ -70,9 +71,10 @@
     background-color: #D20F3E;
     border: none;
     font-size: 0.5rem;
-    margin-left: 0.5rem;
-    padding: 0.3rem;
-    border-radius: 0.8rem;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
 }
 .pastries-list .add-btn:hover {
     background-color: #c84f6b;
