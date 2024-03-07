@@ -25,7 +25,6 @@
     margin-bottom: 2rem;
 }
 
-
 .pastries-list li {
     display: grid;
     grid-template-columns: 2fr 0.8fr;

@@ -1,8 +1,10 @@
 import './PastriesList.css'
 import PastryItem from "./PastryItem";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Footer from '../components/Footer'
+import noise from '../assets/noise.png'
 
-export default function PastriesList({ pastries, basket, onBasketChange }) {
+export default function PastriesList({ pastries, basket, onBasketChange, footerVisible }) {
 
     const [formData, setFormData] = useState({})
 
@@ -41,6 +43,7 @@ export default function PastriesList({ pastries, basket, onBasketChange }) {
                     </li>
                 })}
             </ul>
+            <Footer color='#FFC5E8' image={noise} visible={footerVisible}  />
         </div>
     )
 }

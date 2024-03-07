@@ -52,35 +52,53 @@ export default function Checkout({ basket }) {
 
   return (
     <section className="checkout">
-      <form action="" onSubmit={handleSubmit}>
-        <section>
-          <h5>Personal Details</h5>
-          <label htmlFor="">First Name</label>
-          <input type="text" name='firstname' onChange={handleFormChange} required />
-          <label htmlFor="">Last Name</label>
-          <input type="text" name='lastname' onChange={handleFormChange} required />
-          <label htmlFor="">Contact Number</label>
-          <input type="number" name='phoneNumber' onChange={handleFormChange} size={10} required />
-        </section>
-        <section>
-          <h5>Shipping Address</h5>
-          <label htmlFor="">Deliver to</label>
-          <input type="text" placeholder='Enter Location' name='delivery-address' onChange={handleFormChange} required />
-          <label htmlFor="">Apartment, unit, suite, or floor #</label>
-          <input type="text" name='unitNumber' onChange={handleFormChange} />
-          <label htmlFor="">Street</label>
-          <input type="text" name='street' onChange={handleFormChange} />
-          <label htmlFor="">City</label>
-          <input type="text" name='city' onChange={handleFormChange} required />
-          <label htmlFor="">State / Province</label>
-          <input type="text" name='stateOrProvince' onChange={handleFormChange} required />
-          <label htmlFor="">Post code</label>
-          <input type="text" name='postCode' onChange={handleFormChange} required />
-          <label htmlFor="">Country / Region</label>
-          <input type="text" name='countryOrRegion' onChange={handleFormChange} required />
-        </section>
-        <button onClick={handleCheckout}>continue</button>
-      </form>
+      <div className="checkout-form">
+        <form action="" onSubmit={handleSubmit}>
+          <section className='personal-details'>
+            <h5>Personal Details</h5>
+            <div className='name'>
+              <label htmlFor="">First Name</label>
+              <input type="text" name='firstname' onChange={handleFormChange} required />
+              <label htmlFor="">Last Name</label>
+              <input type="text" name='lastname' onChange={handleFormChange} required />
+            </div>
+            <div>
+              <label htmlFor="">Contact No.</label>
+              <input type="text" name='phoneNumber' onChange={handleFormChange} required />
+              <label htmlFor="">Email</label>
+              <input type="email" name='email' onChange={handleFormChange} required />
+            </div>
+          </section>
+          <section className='shipping'>
+            <h5>Shipping Address</h5>
+            {/* <section className="deliver-to">
+            <label htmlFor="">Deliver to</label>
+              <input type="text" placeholder='Enter Location' name='delivery-address' onChange={handleFormChange} required />
+            </section> */}
+            <div className='street'>
+              <label htmlFor="">Unit </label>
+              <input type="text" name='unitNumber' onChange={handleFormChange} />
+              <label htmlFor="">Street</label>
+              <input type="text" name='street' onChange={handleFormChange} />
+            </div>
+            <div className="city">
+              <label htmlFor="">City</label>
+              <input type="text" name='city' onChange={handleFormChange} required />
+              <label htmlFor="">State</label>
+              <input type="text" name='stateOrProvince' onChange={handleFormChange} required />
+            </div>
+            <div className="region">
+              <label htmlFor="">Post code</label>
+              <input type="text" name='postCode' onChange={handleFormChange} required />
+              <label htmlFor="">Country</label>
+              <input type="text" name='countryOrRegion' onChange={handleFormChange} required />
+            </div>
+          </section>
+          <div className='btn'>
+            <button onClick={handleCheckout} className='continue-btn'>continue to payment</button>
+          </div>
+        </form>
+      </div>
     </section>
   )
 }

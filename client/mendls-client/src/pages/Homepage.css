@@ -4,15 +4,11 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   font-family: 'Della-Robia';
+  height: 100vh;
 }
 
 .homepage .center {
-  display: flex;
   text-align: center;
-  justify-items: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .homepage .right {
@@ -35,6 +31,7 @@
 
 .homepage .center img {
   width: 30rem;
+  margin-top: 4rem;
 }
 
 .homepage .left img {
@@ -84,21 +81,28 @@
   margin-top: -50px;
 }
 
+.homepage .store-hours {
+  font-size: 10px;
+  color: #D20F3E;
+  font-family: 'Matchbox-Lettre';
+  margin: 2rem 0 1rem
+}
+
 .homepage .shop-btn {
-  padding: 0.5rem;
-  width: 5rem;
+  padding: 0.3rem 2rem;
   background-color: #D20F3E;
   color: #FFFAF0;
   border: none;
   border-radius: 1rem;
   font-family: 'Della-Robia';
   text-decoration: none;
+  font-size: 12px;
 }
 .homepage .shop-btn:hover {
   background-color: #c84f6b;
   transform: scale(1.2);
-
 }
+
 
 @keyframes slideIn {
   from{

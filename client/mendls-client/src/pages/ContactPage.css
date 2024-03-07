@@ -1,0 +1,27 @@
+.contact-page {
+  text-align: center;
+  height: 100vh;
+  background-color: #FFC5E8;
+  background-image: url('../assets/noise.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Della-Robia';
+  color: #D20F3E;
+  font-size: 1rem;
+}
+
+.contact-page span {
+  font-size: 1.2rem;
+  margin: 0.5rem
+}
+
+.contact-page p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-page .hours {
+  margin-bottom: 1rem;
+}

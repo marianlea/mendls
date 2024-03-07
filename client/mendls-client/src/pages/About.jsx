@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import './About.css'
 
 export default function About() {
@@ -20,8 +21,8 @@ export default function About() {
           <h3>Agatha: The Heart of Mendl's Confections</h3>
           <p>Agatha, with her gentle demeanor and unwavering dedication, is the soul behind Mendl's Confections. As a talented baker and apprentice to Herr Mendl, she imbues each pastry with warmth and love, elevating them beyond mere desserts to cherished works of art. Inspired by her creativity and passion, our online shop offers a selection of pastries crafted in Agatha's spirit, each one a testament to her talent and the legacy she continues to inspire.</p>
         </div>
-
       </article>
+      <Footer color='#FFFAF0' image='none' visible='visible' />
     </div>
   )
 }

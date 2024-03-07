@@ -13,6 +13,7 @@ import { useLocation } from 'react-router-dom'
 import PaymentSuccess from './pages/PaymentSuccess'
 import PaymentCancel from './pages/PaymentCancel'
 import Checkout from './pages/Checkout'
+import ContactPage from './pages/ContactPage'
 
 const drawerWidth = 450;
 
@@ -52,7 +53,22 @@ function App() {
   }
 
   function removeItemFromBasket(pastry) {
-    setBasket((prev) => prev.filter(item => pastry.id !== item.id ))
+    setBasket((prev) => {
+      return prev.filter(item => pastry.id !== item.id )
+    })
+    clearInputValue(pastry.id)
+  }
+
+  function clearInputValue(id) {
+    setPastries((prev) => {
+      const updatedPastries = prev.map(pastry => {
+        if (pastry.id === id) {
+          return { ...pastry, qunatity: null }
+        }
+        return pastry
+      })
+      return updatedPastries
+    })
   }
 
   return (
@@ -66,13 +82,18 @@ function App() {
         <Route path='/' element={
           <>
             <Homepage />
-            <PastriesList pastries={pastries} basket={basket} onBasketChange={addToBasket} />
+            <PastriesList 
+              pastries={pastries} 
+              basket={basket} 
+              onBasketChange={addToBasket}
+              footerVisible={location.pathname === '/#shop'} />
           </>
         } />
         <Route path='/about' element={<About />} />
-        <Route path='/success' element={<PaymentSuccess />} />
+        <Route path='/success' element={<PaymentSuccess resetBasket={setBasket} />} />
         <Route path='/cancel' element={<PaymentCancel />} />
         <Route path='/checkout' element={<Checkout basket={basket} />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
       <Drawer 
         open={isBasketVisible} 
@@ -84,9 +105,7 @@ function App() {
             width: drawerWidth,
             boxSizing: 'border-box',
             flexShrink: 0,
-            backgroundImage: `url(${noise})`, // Add your image path here
-            // backgroundRepeat: 'no-repeat',
-            // backgroundSize: 'contain',
+            backgroundImage: `url(${noise})`,
             backgroundPosition: 'center',
             backgroundColor: '#FFFAF0'
           },

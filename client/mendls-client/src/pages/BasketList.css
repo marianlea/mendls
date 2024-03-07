@@ -5,7 +5,11 @@
 }
 
 .basket-list .empty-basket {
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
 
 .basket-list .your-basket {
@@ -106,12 +110,12 @@
   padding-left: 1rem;
 }
 
-.basket-list .checkout {
+.basket-list .checkout-basket {
   align-items: center;
   text-align: center;
 }
 
-.basket-list .checkout p {
+.basket-list .checkout-basket p {
   font-size: 0.7rem;
   margin-bottom: 0.5rem;
 }
@@ -124,4 +128,6 @@
   padding: 5px;
   border-radius: 10px;
   font-family: 'Della-Robia';
+  text-decoration: none;
 }
+

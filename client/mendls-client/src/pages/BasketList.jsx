@@ -1,9 +1,6 @@
-
-import { v1 as uuidv1 } from 'uuid';
 import PastryItem from "./PastryItem";
 import CancelIcon from '@mui/icons-material/Cancel';
 import './BasketList.css'
-import { loadStripe } from '@stripe/stripe-js'
 import { Link as LinkRouter } from 'react-router-dom';
 
 export default function BasketList({ basket, onBasketChange, setIsBasketVisible, removeItemFromBasket }) {
@@ -16,36 +13,15 @@ export default function BasketList({ basket, onBasketChange, setIsBasketVisible,
     setIsBasketVisible(false)
   }
 
-  // async function handleCheckout() {
-  //   const stripe = await loadStripe('pk_test_51OppwUJMehcHOqCV1mz7CJJ99LZcVSOW6YZyX5GAvm6XVzQfZNpDUpBGF30PeezQPTVUjAXe3NN1q6kPifL2U3uY00sJ4OQIce')
+  if (basket.length === 0) {
+    return <div className="basket-list">
+      <div onClick={handleBasketClose} className="close-icon-wrapper">
+      <CancelIcon />
+      </div>
+      <p className="empty-basket">Your basket is empty.</p>
+      </div>
+  }
 
-  //   const body = {
-  //     products: basket,
-  //     cartId: uuidv1()
-  //   }
-
-  //   const headers = {
-  //     "Content-Type": "application/json"
-  //   }
-
-  //   const response = await fetch('/api/create-checkout-session', {
-  //     method: 'POST',
-  //     headers: headers,
-  //     body: JSON.stringify(body)
-  //   })
-
-  //   console.log(body);
-
-  //   const session = await response.json()
-
-  //   const result = stripe.redirectToCheckout({
-  //     sessionId: session.id
-  //   })
-
-  //   if (result.error) {
-  //     console.log(result.error);
-  //   }
-  // }
   return (
     <div className="basket-list">
       <div onClick={handleBasketClose} className="close-icon-wrapper">
@@ -93,7 +69,7 @@ export default function BasketList({ basket, onBasketChange, setIsBasketVisible,
           }
         </span>
       </section>
-      <div className="checkout">
+      <div className="checkout-basket">
         <p>* shipping fee calculated at checkout</p>
         <LinkRouter to='/checkout' className="checkout-btn" onClick={handleBasketClose}>checkout</LinkRouter>
       </div>

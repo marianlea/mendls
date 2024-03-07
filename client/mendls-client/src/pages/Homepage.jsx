@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react'
 import './Homepage.css'
-import { Link as ScrollLink } from 'react-scroll'
 import logo from '../assets/logo-large.png'
 import whiskCream from '../assets/whiskCream.png'
 import bowl from '../assets/bowl.png'
@@ -11,6 +10,7 @@ import mitten from '../assets/mitten.png'
 import whiskAndPin from '../assets/whiskAndPin.png';
 import box from '../assets/box.png'
 import { NavHashLink } from 'react-router-hash-link';
+import Footer from '../components/Footer'
 
 export default function Homepage() {
 
@@ -64,6 +64,7 @@ export default function Homepage() {
       </div>
       <div className='center'>
         <img className='main-logo' src={logo} alt="" />
+        <p className='store-hours'>STORE HOURS 7AM TO 3PM</p>
         <NavHashLink  to='/#shop'  className='shop-btn'>SHOP</NavHashLink  >
       </div>
       <div className='right'>

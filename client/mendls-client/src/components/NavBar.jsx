@@ -1,6 +1,5 @@
 import './NavBar.css'
 import logo from '../assets/logo.png'
-import noise from '../assets/noise.png'
 import basketIcon from '../assets/basket.png'
 import { Link as LinkRouter } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
@@ -15,6 +14,7 @@ export default function NavBar({
 }) {
 
   const [background, setBackground] = useState({backgroundColor: 'transparent'})
+  const [footerIsVisible, setFooterIsVisible] = useState('hidden')
 
   function scrollToTop() {
     window.scrollTo({top:0,left:0, behavior: 'smooth'})
@@ -32,12 +32,14 @@ export default function NavBar({
             backgroundColor: "#FFFAF0",
           } 
         )
+        setFooterIsVisible('visible') 
       } else {
         setBackground(
           {
             backgroundColor: "transparent",
-          } 
-        )
+          }
+          )
+        setFooterIsVisible('hidden') 
       }
     };
 
@@ -58,7 +60,7 @@ export default function NavBar({
         </LinkRouter>
         <div className='links'>
           <LinkRouter to='/' onClick={scrollToTop}className='link'>HOME</LinkRouter>
-          <NavHashLink to='/#shop' className='link'>SHOP</NavHashLink>
+          <NavHashLink to='/#shop' className='link' visibility={footerIsVisible}>SHOP</NavHashLink>
           <LinkRouter to='/about' className='link'>ABOUT</LinkRouter>
         <div>
         <div style={{position: 'relative'}}>

@@ -1,4 +1,4 @@
-.payment-success {
+.message {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,13 +9,13 @@
   text-align: center;
   height: 100vh;
   color: #D20F3E;
+  font-size: 14px;
 }
 
-.payment-success img {
+.payment img {
   width: 150px;
-  margin-top: 2rem;
 }
 
-.payment-success p {
-  margin-top: 0.5rem;
+.payment p {
+  margin-top: 5px;
 }

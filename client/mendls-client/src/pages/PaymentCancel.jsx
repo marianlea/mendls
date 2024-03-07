@@ -1,8 +1,16 @@
-export default function PaymentCancel() {
+import Footer from '../components/Footer'
+import './PaymentSuccess.css'
+
+
+export default function PaymentCancel({ }) {
 
   return (
-    <div>
-      payment NOT successful
-    </div>
+    <section className='payment'>
+      <div className="message">
+        <p>Sorry, your payment was declined.</p>
+        <p>Please try again with a valid card.</p>
+      </div>
+      <Footer color='#FFFAF0' image='none' />
+    </section>
   )
 }
