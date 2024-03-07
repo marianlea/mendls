@@ -41,13 +41,29 @@
 
 .basket-list .quantity {
   width: 2rem;
-  background-color: #FFFAF0;
-  background-image: url('../assets/noise.png');
+  background-color: transparent;
   text-align: right;
   font-family: 'Della-Robia';
   border: none;
   border-bottom: 1px dotted #545454;
   color: #D20F3E;
+}
+.basket-list .quantity:focus {
+  outline: none;
+  border: 1px solid #D20F3E;
+}
+.basket-list .quantity[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  background-image: url('../assets/arrows.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor:pointer;
+  display:block;
+  width:8px;
+  text-align:center;
+  position:relative;
+  margin-left: 5px;
 }
 
 .basket-list .remove-btn {

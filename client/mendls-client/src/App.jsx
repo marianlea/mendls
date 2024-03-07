@@ -14,6 +14,7 @@ import PaymentSuccess from './pages/PaymentSuccess'
 import PaymentCancel from './pages/PaymentCancel'
 import Checkout from './pages/Checkout'
 import ContactPage from './pages/ContactPage'
+import Pastry from './pages/Pastry'
 
 const drawerWidth = 450;
 
@@ -94,6 +95,13 @@ function App() {
         <Route path='/cancel' element={<PaymentCancel />} />
         <Route path='/checkout' element={<Checkout basket={basket} />} />
         <Route path='/contact' element={<ContactPage />} />
+        {pastries.map(pastry => {
+          return <Route 
+                  path={`/shop/${pastry.title}`} 
+                  element={<Pastry pastry={pastry}
+                  basket={basket} 
+                  onBasketChange={addToBasket}/>} 
+                 />})}
       </Routes>
       <Drawer 
         open={isBasketVisible} 
@@ -111,7 +119,11 @@ function App() {
           },
         }}
       >
-        <BasketList basket={basket} onBasketChange={addToBasket} setIsBasketVisible={setIsBasketVisible} removeItemFromBasket={removeItemFromBasket}/>
+        <BasketList 
+          basket={basket} 
+          onBasketChange={addToBasket} 
+          setIsBasketVisible={setIsBasketVisible} 
+          removeItemFromBasket={removeItemFromBasket}/>
       </Drawer>
     </div>
   )
