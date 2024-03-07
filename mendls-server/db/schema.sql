@@ -1,4 +1,4 @@
-CREATE DATABASE mendls_api;
+-- CREATE DATABASE mendls_api;
 
 CREATE TABLE pastries (
     id SERIAL PRIMARY KEY,

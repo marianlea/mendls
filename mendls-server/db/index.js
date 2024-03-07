@@ -1,11 +1,25 @@
 const { Pool } = require('pg')
+const fs = require('fs')
+require('dotenv').config()
 
-if (!process.env.DATABASE_URL) {
+const seedQuery = fs.readFileSync('db/seed.sql', {
+  encoding: 'utf-8'
+})
+
+if (!process.env.POSTGRES_URL) {
     throw Error('database url missing')
 }
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+  connectionString: process.env.POSTGRES_URL,
 })
 
+pool.query(seedQuery, err => {
+  if (err) {
+    throw err
+  }
+  console.log('SQL seed completed')
+})
+
+  
 module.exports = pool

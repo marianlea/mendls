@@ -1,0 +1,7 @@
+INSERT INTO pastries (title, description, price, unit) VALUES ('Courtesan au Chocolat', 'delicate layers of airy choux pastry filled with rich chocolate cream, topped with a glossy chocolate glaze and adorned with intricate swirls', '9.5', '1');
+INSERT INTO pastries (title, description, price, unit) VALUES ('Éclair au Chocolat', 'golden-brown choux pastry shell filled with velvety chocolate filling and topped with a glossy chocolate glaze', '3.5', '1');
+INSERT INTO pastries (title, description, price, unit) VALUES ('Macaron Assortis', 'variety of creamy flavoured ganache sandwiched between almond meringue shells with crisp exterior giving way to a soft, chewy interior', '15.8', '5');
+INSERT INTO pastries (title, description, price, unit) VALUES ('Madeleines', 'light and fluffy scalloped shaped sponge cakes, with a hint of buttery sweetness and fresh lemon', '8.5', '3');
+INSERT INTO pastries (title, description, price, unit) VALUES ('Canelés', 'caramelized crust and a tender custard-like interior with rich, rum-infused flavor with hints of vanilla and a touch of sweetness', '4.2', '1');
+INSERT INTO pastries (title, description, price, unit) VALUES ('Gâteau aux Framboises', 'features layers of light and fluffy sponge cake generously filled with luscious raspberry jam or fresh raspberry compote', '8.9', '1');
+INSERT INTO pastries (title, description, price, unit) VALUES ('Flan Pâtissier', 'buttery, flaky crust filled with a smooth, creamy custard', '4.8', '1');
