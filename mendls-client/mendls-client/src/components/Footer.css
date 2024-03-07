@@ -1,0 +1,17 @@
+.footer {
+  height: 4.5rem;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 5px 0 20px 60px;
+}
+
+.footer .link {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #D20F3E;
+  margin-right: 20px;
+  font-family: 'Della-Robia';
+}
