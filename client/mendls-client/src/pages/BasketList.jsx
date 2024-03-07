@@ -40,9 +40,9 @@ export default function BasketList({ basket, onBasketChange, setIsBasketVisible,
                   <PastryItem  
                     className="item" 
                     pastry={pastry}
-                    titleSize='1rem'
-                    imageSize='3rem'
-                    spanSize='0.7rem' />
+                    titleSize='1.5rem'
+                    imageSize='3.5rem'
+                    spanSize='0.8rem' />
                   <section className="form">
                     <input
                         className="quantity"

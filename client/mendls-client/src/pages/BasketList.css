@@ -37,7 +37,7 @@
 }
 
 .basket-list .total {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
 }
 
 .basket-list .quantity {
@@ -48,6 +48,7 @@
   border: none;
   border-bottom: 1px dotted #545454;
   color: #D20F3E;
+  font-size: 1.3rem;
 }
 .basket-list .quantity:focus {
   outline: none;
@@ -112,6 +113,7 @@
   margin-top: 2rem;
   padding-left: 1rem;
   margin-bottom: 4rem;
+  font-size: 1.2rem;
 }
 
 .basket-list .basket-total h5 {

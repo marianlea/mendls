@@ -12,10 +12,15 @@ export default function PastryItem({ pastry, spanSize, imageSize, titleSize }) {
             <article 
                 className="pastry"
                 style={{fontSize: titleSize}}>
-                <img 
-                    src={imageUrl} 
-                    alt=""
-                    style={{width: imageSize}} />
+                <Link 
+                    to={`/shop/${pastry.title}`}
+                    className='link'
+                >
+                    <img 
+                        src={imageUrl} 
+                        alt=""
+                        style={{width: imageSize}} />
+                </Link>
                 <Link 
                     to={`/shop/${pastry.title}`}
                     className='link'
