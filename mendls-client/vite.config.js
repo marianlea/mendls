@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://mendls-server.vercel.app',
+      '/api': 'https://mendls-server.vercel.app/',
     }
   }
 })
