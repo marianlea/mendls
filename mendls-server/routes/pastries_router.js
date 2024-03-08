@@ -8,10 +8,10 @@ router.get('/api/pastries', async (req, res) => {
     res.json(pastries)
 })
 
-router.get('/api/pastries/:id', async (req, res) => {
-    let pastry = await Pastries.findOneById(req.params.id)
-    res.json(pastry)
-})
+// router.get('/api/pastries/:id', async (req, res) => {
+//     let pastry = await Pastries.findOneById(req.params.id)
+//     res.json(pastry)
+// })
 
 
 module.exports = router
