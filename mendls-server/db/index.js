@@ -2,9 +2,7 @@ const { Pool } = require('pg')
 const fs = require('fs')
 require('dotenv').config()
 
-const seedQuery = fs.readFileSync(process.cwd() + '/db/seed.sql', {
-  encoding: 'utf-8'
-})
+const seedQuery = fs.readFileSync('db/seed', 'utf-8')
 
 if (!process.env.POSTGRES_URL) {
     throw Error('database url missing')
