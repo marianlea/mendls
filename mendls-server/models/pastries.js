@@ -19,7 +19,7 @@ async function findAll() {
 //     return result.rows[0]
 // }
 
-// module.exports = {
-//     findAll,
-//     findOneById
-// }
+module.exports = {
+    findAll,
+    // findOneById
+}
