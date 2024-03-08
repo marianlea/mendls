@@ -29,6 +29,7 @@ function App() {
   useEffect(()=>{
     Pastries.all()
       .then(pastries => {
+        console.log(pastries)
         setPastries(pastries)
       })
   }, [])
