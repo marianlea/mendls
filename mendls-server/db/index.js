@@ -2,7 +2,7 @@ const { Pool } = require('pg')
 const fs = require('fs')
 require('dotenv').config()
 
-const seedQuery = fs.readFileSync('db/seed.sql', {
+const seedQuery = fs.readFileSync('./seed.sql', {
   encoding: 'utf-8'
 })
 
