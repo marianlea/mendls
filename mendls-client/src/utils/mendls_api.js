@@ -1,10 +1,9 @@
 import axios from "axios";
-const SERVER_URL = process.env.REACT_APP_SERVER_URL
 
 
 
 async function all() {
-    let res = await axios.get(`${SERVER_URL}/api/pastries`)
+    let res = await axios.get('https://mendls-server.vercel.app/api/pastries')
     return res.data
 }
 
