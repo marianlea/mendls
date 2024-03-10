@@ -31,7 +31,7 @@ export default function Checkout({ basket }) {
       "Content-Type": "application/json"
     }
   
-    const response = await fetch('/api/create-checkout-session', {
+    const response = await fetch('https://mendls-server.vercel.app/api/create-checkout-session', {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(body)
