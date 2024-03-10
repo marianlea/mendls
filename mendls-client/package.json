@@ -1,6 +1,6 @@
 {
   "name": "mendls-client",
-  "homepage": "https://mendls-client.vercel.app",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
