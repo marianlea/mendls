@@ -40,8 +40,8 @@ router.post('/api/create-checkout-session', async (req, res) => {
     shipping_options: [
       {shipping_rate: 'shr_1Ora7kJMehcHOqCVv2qp6SgU'}
     ],
-    success_url: 'http://localhost:5173/success',
-    cancel_url: 'http://localhost:5173/cancel'
+    success_url: 'https://mendls.vercel.app/success',
+    cancel_url: 'https://mendls.vercel.app/cancel'
   })
 
   res.json(session)
