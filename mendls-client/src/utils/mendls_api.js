@@ -1,4 +1,4 @@
-require ('dotenv').config()
+require('dotenv').config()
 import axios from "axios";
 
 
