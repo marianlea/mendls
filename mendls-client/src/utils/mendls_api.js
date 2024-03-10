@@ -1,8 +1,10 @@
+require ('dotenv').config()
 import axios from "axios";
 
 
+
 async function all() {
-    let res = await axios.get('https://mendls-server.vercel.app/api/pastries')
+    let res = await axios.get(`${process.env.SERVER_URL}/api/pastries`)
     return res.data
 }
 
