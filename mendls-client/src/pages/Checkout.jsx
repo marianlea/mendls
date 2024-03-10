@@ -72,10 +72,6 @@ export default function Checkout({ basket }) {
           </section>
           <section className='shipping'>
             <h5>Shipping Address</h5>
-            {/* <section className="deliver-to">
-            <label htmlFor="">Deliver to</label>
-              <input type="text" placeholder='Enter Location' name='delivery-address' onChange={handleFormChange} required />
-            </section> */}
             <div className='street'>
               <label htmlFor="">Unit </label>
               <input type="text" name='unitNumber' onChange={handleFormChange} />
