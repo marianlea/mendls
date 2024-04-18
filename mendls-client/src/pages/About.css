@@ -1,5 +1,61 @@
+.about {
+  font-family: "Della-Robia";
+  background-color: #ffc5e8;
+  background-image: url("../assets/noise.png");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d20f3e;
+  letter-spacing: 1px;
+}
+
+.about .staff {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about .photo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.about .herr-mendl {
+  background-image: url("../assets/herr-mendl.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 0%;
+}
+
+.about .agatha {
+  background-image: url("../assets/agatha.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 10%;
+}
+
+.about .description {
+  width: 15rem;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+.about h3 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.about p {
+  font-size: 0.7rem;
+}
 @media (min-width: 600px) {
-  .about {
+  /* .about {
     font-family: "Della-Robia";
     background-color: #ffc5e8;
     background-image: url("../assets/noise.png");
@@ -10,7 +66,7 @@
     justify-content: center;
     color: #d20f3e;
     letter-spacing: 1px;
-  }
+  } */
 
   .about .staff {
     display: flex;
