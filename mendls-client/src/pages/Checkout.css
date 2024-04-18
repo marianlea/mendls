@@ -3,6 +3,9 @@
   background-image: url("../assets/noise.png");
   padding-top: 6rem;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkout .checkout-form {
