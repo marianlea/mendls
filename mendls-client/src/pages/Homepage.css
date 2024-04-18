@@ -14,11 +14,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-left: -3rem; */
+  margin-left: -3.5rem;
 }
 
 .homepage .center img {
-  width: 10rem;
+  width: 15rem;
   z-index: 99;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .homepage .right {
-  /* margin-left: -3rem; */
+  margin-left: -4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,19 +54,19 @@
 
 .homepage .spatulaAndBowl {
   margin-top: -2rem;
-  margin-left: -3rem;
+  margin-left: -1rem;
   width: 9rem;
 }
 
 .homepage .spoon {
-  margin-left: -4rem;
+  margin-left: -3rem;
   width: 5rem;
 }
 
 .homepage .leftPin {
   width: 9rem;
   margin-top: -2rem;
-  margin-left: -3rem;
+  margin-left: -2rem;
 }
 
 .homepage .mitten {
@@ -75,7 +75,7 @@
 
 .homepage .box {
   width: 4rem;
-  margin-right: -2rem;
+  margin-right: -4rem;
   margin-top: -1rem;
 }
 
