@@ -54,6 +54,20 @@
 }
 
 @media (min-width: 768px) {
+  .nav-bar .links {
+    font-size: 2rem;
+  }
+
+  .nav-bar .basket-icon {
+    width: 3.5rem;
+  }
+
+  .nav-bar .logo {
+    width: 12rem;
+  }
+}
+
+@media (min-width: 1200px) {
   .nav-bar {
     position: fixed;
     display: grid;

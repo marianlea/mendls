@@ -95,7 +95,67 @@
   margin: 2rem 1rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
+  .homepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100vh;
+  }
+
+  .homepage .center img {
+    width: 40rem;
+  }
+
+  .homepage .center,
+  .homepage .right {
+    margin-left: -5rem;
+  }
+
+  .homepage .whiskCream {
+    width: 17rem;
+  }
+
+  .homepage .spatulaAndBowl {
+    margin-top: -2rem;
+    margin-left: -1rem;
+    width: 17rem;
+  }
+
+  .homepage .spoon {
+    margin-left: -3rem;
+    width: 10rem;
+  }
+
+  .homepage .leftPin {
+    width: 19rem;
+    margin-top: -2rem;
+    margin-left: -2rem;
+  }
+
+  .homepage .mitten {
+    width: 17rem;
+  }
+
+  .homepage .box {
+    width: 13rem;
+    margin-right: -4rem;
+    margin-top: -1rem;
+  }
+
+  .homepage .whiskPin {
+    width: 17rem;
+  }
+
+  .homepage .bowl {
+    width: 17rem;
+  }
+
+  .homepage .store-hours {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
   .homepage {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
