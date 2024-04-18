@@ -15,8 +15,7 @@ import PaymentCancel from "./pages/PaymentCancel";
 import Checkout from "./pages/Checkout";
 import ContactPage from "./pages/ContactPage";
 import Pastry from "./pages/Pastry";
-
-const drawerWidth = 650;
+import useWindowWidth from "./helpers/useWindowWidth";
 
 function App() {
   const [pastries, setPastries] = useState([]);
@@ -24,6 +23,7 @@ function App() {
   const [basket, setBasket] = useState(savedBasket || []);
   const [isBasketVisible, setIsBasketVisible] = useState(false);
   const location = useLocation();
+  const drawerWidth = useWindowWidth().width > 748 ? 650 : "80%";
 
   useEffect(() => {
     Pastries.all().then((pastries) => {

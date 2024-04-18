@@ -1,12 +1,16 @@
 .pastry-item .pastry {
   font-family: "Della-Robia";
   color: #d20f3e;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
 }
 
 .pastry-item .link {
   color: #d20f3e;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .pastry-item .pastry-price {

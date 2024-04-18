@@ -3,6 +3,7 @@ import PastryItem from "./PastryItem";
 import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import noise from "../assets/noise.png";
+import useWindowWidth from "../helpers/useWindowWidth";
 
 export default function PastriesList({
   pastries,
@@ -11,6 +12,7 @@ export default function PastriesList({
   footerVisible,
 }) {
   const [formQuantities, setFormQuantities] = useState({});
+  const windowWidth = useWindowWidth().width;
 
   useEffect(() => {
     const initialQuantities = {};
@@ -46,12 +48,21 @@ export default function PastriesList({
       <ul>
         {pastries.map((pastry) => (
           <li key={pastry.id}>
-            <PastryItem
-              pastry={pastry}
-              spanSize="1rem"
-              imageSize="6rem"
-              titleSize="1.5rem"
-            />
+            {windowWidth > 748 ? (
+              <PastryItem
+                pastry={pastry}
+                spanSize="1rem"
+                imageSize="6rem"
+                titleSize="1.5rem"
+              />
+            ) : (
+              <PastryItem
+                pastry={pastry}
+                spanSize="0.8rem"
+                imageSize="3rem"
+                titleSize="1rem"
+              />
+            )}
             <form onSubmit={(e) => handleBasketChange(e, pastry)}>
               <input
                 type="number"

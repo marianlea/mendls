@@ -1,36 +1,73 @@
+.basket-list {
+  font-family: "Della-Robia";
+  color: #d20f3e;
+  padding: 1rem;
+}
+
+.basket-list .empty-basket {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.basket-list .your-basket {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Matchbox-Lettre";
+  font-size: 1.2rem;
+}
+
+.basket-list ul {
+  list-style-type: none;
+  border-bottom: 1px dotted #d20f3e;
+  padding-bottom: 1.5rem;
+}
+
+.basket-list .close-icon-wrapper {
+  text-align: right;
+  color: #d20f3e;
+  padding: 10px;
+}
+
+.basket-list .basket-item {
+  text-align: center;
+}
+
 @media (min-width: 600px) {
-  .basket-list {
+  /* .basket-list {
     font-family: "Della-Robia";
     color: #d20f3e;
     padding: 1rem;
-  }
+  } */
 
-  .basket-list .empty-basket {
+  /* .basket-list .empty-basket {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     height: 80vh;
-  }
+  } */
 
-  .basket-list .your-basket {
+  /* .basket-list .your-basket {
     text-align: center;
     margin-bottom: 1.5rem;
     font-family: "Matchbox-Lettre";
     font-size: 1.2rem;
-  }
+  } */
 
-  .basket-list ul {
+  /* .basket-list ul {
     list-style-type: none;
     border-bottom: 1px dotted #d20f3e;
     padding-bottom: 1.5rem;
-  }
+  } */
 
-  .basket-list .close-icon-wrapper {
+  /* .basket-list .close-icon-wrapper {
     text-align: right;
     color: #d20f3e;
     padding: 10px;
-  }
+  } */
 
   .basket-list .basket-item {
     display: grid;
