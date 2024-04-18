@@ -80,7 +80,13 @@
   background-color: #c84f6b;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
+  .pastries-list ul {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
   .pastries-list {
     /* font-family: "Della-Robia";
     background-color: #fffaf0;
