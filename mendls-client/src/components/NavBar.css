@@ -36,12 +36,12 @@
 }
 
 .nav-bar .quantity {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 50%;
   background-color: #d20f3e;
   color: #fffaf0;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
