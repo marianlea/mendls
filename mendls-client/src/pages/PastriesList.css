@@ -29,8 +29,7 @@
 
 .pastries-list li {
   display: grid;
-  grid-template-columns: 2fr 0.8fr;
-  gap: 0.7rem;
+  grid-template-columns: 2fr 1fr;
 }
 
 .pastries-list form {
@@ -73,8 +72,8 @@
   background-color: #d20f3e;
   border: none;
   font-size: 0.5rem;
-  margin-left: 1.5rem;
-  padding: 0.6rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
   border-radius: 1rem;
 }
 .pastries-list .add-btn:hover {

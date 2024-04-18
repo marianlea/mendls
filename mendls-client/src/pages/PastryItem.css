@@ -2,7 +2,7 @@
   font-family: "Della-Robia";
   color: #d20f3e;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
   align-items: center;
   justify-content: center;
 }
