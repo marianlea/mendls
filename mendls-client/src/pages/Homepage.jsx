@@ -9,8 +9,6 @@ import leftPin from '../assets/leftPin.png'
 import mitten from '../assets/mitten.png'
 import whiskAndPin from '../assets/whiskAndPin.png';
 import box from '../assets/box.png'
-import { NavHashLink } from 'react-router-hash-link';
-import Footer from '../components/Footer'
 
 export default function Homepage() {
 
@@ -65,7 +63,6 @@ export default function Homepage() {
       <div className='center'>
         <img className='main-logo' src={logo} alt="" />
         <p className='store-hours'>STORE HOURS 7AM TO 3PM</p>
-        {/* <NavHashLink  to='/#shop'  className='shop-btn'>SHOP</NavHashLink  > */}
       </div>
       <div className='right'>
         <img className={`mitten ${slideClass.slideOutOne}`} src={mitten} alt="" />

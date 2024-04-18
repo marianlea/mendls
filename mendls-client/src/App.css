@@ -3,15 +3,19 @@ html {
 }
 
 .App {
-  font-family: 'Matchbox-Lettre';
-  width: 100vw;
+  font-family: "Matchbox-Lettre";
 }
 
-.App .wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
+@media (min-width: 600px) {
+  .App {
+    width: 100vw;
+  }
 
+  .App .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
 
 .App img {
   -webkit-user-drag: none;

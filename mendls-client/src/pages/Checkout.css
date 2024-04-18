@@ -1,99 +1,100 @@
-.checkout {
-  background-color: #FFC5E8;
-  background-image: url('../assets/noise.png');
-  padding-top: 8rem;
-  height: 100vh;
-}
+@media (min-width: 600px) {
+  .checkout {
+    background-color: #ffc5e8;
+    background-image: url("../assets/noise.png");
+    padding-top: 8rem;
+    height: 100vh;
+  }
 
-.checkout .checkout-form {
-  width: 60%;
-  font-family: 'Della-Robia';
-  padding: 1.5rem;
-  margin: 0 auto;
-  color: #D20F3E;
-  background-color: #DAE6E3;
-  margin-bottom: 2rem;
-}
+  .checkout .checkout-form {
+    width: 60%;
+    font-family: "Della-Robia";
+    padding: 1.5rem;
+    margin: 0 auto;
+    color: #d20f3e;
+    background-color: #dae6e3;
+    margin-bottom: 2rem;
+  }
 
-.checkout h5 {
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
-  border-bottom: 1px dotted #D20F3E;
-  padding-bottom: 1rem ;
-}
+  .checkout h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dotted #d20f3e;
+    padding-bottom: 1rem;
+  }
 
-.checkout label {
-  font-size: 1rem;
-  margin-right: 0.5rem;
-  text-align: right;
-  color: #545454;
-}
+  .checkout label {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    text-align: right;
+    color: #545454;
+  }
 
-.checkout input {
-  margin-right: 0.8rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-  padding: 0.5rem;
-  font-family: 'Della-Robia';
-  font-size: 1rem;
-  border: none;
-  color: #D20F3E;
-  background-color: #FFFAF0;
-}
-.checkout input:focus {
-  outline: none;
-  border: 1px solid #D20F3E;
-}
+  .checkout input {
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    font-family: "Della-Robia";
+    font-size: 1rem;
+    border: none;
+    color: #d20f3e;
+    background-color: #fffaf0;
+  }
+  .checkout input:focus {
+    outline: none;
+    border: 1px solid #d20f3e;
+  }
 
-.checkout .shipping {
-  margin-top: 1.5rem;
-}
+  .checkout .shipping {
+    margin-top: 1.5rem;
+  }
 
-.checkout section {
-  padding: 0 0.5rem;
-}
+  .checkout section {
+    padding: 0 0.5rem;
+  }
 
-.checkout div {
-  padding: 0 1rem;
-}
+  .checkout div {
+    padding: 0 1rem;
+  }
 
-.checkout .personal-details div,
-.checkout .shipping div
- {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
-  justify-content: center;
-  align-items: center;
-}
+  .checkout .personal-details div,
+  .checkout .shipping div {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
 
-.checkout .deliver-to {
-  display: inline-block;
-  width: 100%;
-  padding-left: 2.7rem;
-}
+  .checkout .deliver-to {
+    display: inline-block;
+    width: 100%;
+    padding-left: 2.7rem;
+  }
 
-.checkout .deliver-to input {
-  width: 24.5rem;
-}
-.checkout .label {
-  width: 5rem;
-}
+  .checkout .deliver-to input {
+    width: 24.5rem;
+  }
+  .checkout .label {
+    width: 5rem;
+  }
 
-.checkout .btn {
-  margin: 2rem auto 1rem;
-  text-align: center;
-}
+  .checkout .btn {
+    margin: 2rem auto 1rem;
+    text-align: center;
+  }
 
-.checkout .continue-btn {
-  background-color: #D20F3E;
-  color: #DAE6E3;
-  padding: 5px 1.5rem;
-  border: none;
-  font-size: 1rem;
-  border-radius: 1rem;
-  font-family: 'Della-Robia';
-}
+  .checkout .continue-btn {
+    background-color: #d20f3e;
+    color: #dae6e3;
+    padding: 5px 1.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    font-family: "Della-Robia";
+  }
 
-.checkout .footer {
-  padding-left: 3rem;
+  .checkout .footer {
+    padding-left: 3rem;
+  }
 }

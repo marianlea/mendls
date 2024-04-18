@@ -1,27 +1,48 @@
-.pastry-item {
-    font-family: 'Della-Robia';
-    color: #D20F3E;
+.pastry-item .pastry {
+  font-family: "Della-Robia";
+  color: #d20f3e;
 }
 
-.pastry-item .pastry {
+.pastry-item .link {
+  color: #d20f3e;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.pastry-item .pastry-price {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.pastry-item .pastry-price span {
+  margin-left: 1rem;
+}
+
+@media (min-width: 600px) {
+  .pastry-item .pastry {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.pastry-item .link {
-    color: #D20F3E;
-    text-decoration: none;
-}
+  .pastry-item .link {
+    /* color: #d20f3e;
+    text-decoration: none; */
+    font-size: 1.5rem;
+  }
 
-.pastry-item .pastry-price {
-    display: grid;
+  .pastry-item .pastry-price {
+    /* display: grid; */
     grid-template-columns: 4fr 1fr;
-    justify-content: center;
-    align-items: center;
-}
+    /* /* justify-content: center;
+    align-items: center; */
+    margin-top: 0px;
+  }
 
-.pastry-item .pastry-price span {
+  .pastry-item .pastry-price span {
     text-align: right;
+  }
 }

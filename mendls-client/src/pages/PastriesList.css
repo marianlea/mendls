@@ -1,43 +1,129 @@
 .pastries-list {
-    font-family: 'Della-Robia';
-    background-color: #FFFAF0;
-    background-image: url('../assets/monochrome.png');
-    color: #D20F3E;
-    padding-top: 11rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 5rem;
+  font-family: "Della-Robia";
+  background-color: #fffaf0;
+  background-image: url("../assets/monochrome.png");
+  color: #d20f3e;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  text-align: center;
 }
 
 .pastries-list .pastries-title {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 
 .pastries-list ul {
+  list-style-type: none;
+  border: 2px dotted powderblue;
+  width: 80%;
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+
+.pastries-list li {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.pastries-list form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pastries-list input[type="number"] {
+  width: 4rem;
+  font-family: "Alex Brush", cursive;
+  color: #545454;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted #545454;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.pastries-list input:focus {
+  outline: none;
+  border: 1px solid #d20f3e;
+}
+.pastries-list input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background-image: url("../assets/arrows.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  width: 8px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.pastries-list .add-btn {
+  font-family: "Della-Robia";
+  color: #fffaf0;
+  background-color: #d20f3e;
+  border: none;
+  font-size: 0.5rem;
+  margin-left: 1.5rem;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+.pastries-list .add-btn:hover {
+  background-color: #c84f6b;
+}
+
+@media (min-width: 600px) {
+  .pastries-list {
+    /* font-family: "Della-Robia";
+    background-color: #fffaf0;
+    background-image: url("../assets/monochrome.png");
+    color: #d20f3e; */
+    padding-top: 11rem;
+    text-align: left;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem; */
+  }
+
+  .pastries-list .pastries-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  .pastries-list ul {
     list-style-type: none;
     border: 2px dotted powderblue;
     width: 50%;
     padding: 3rem;
     margin-bottom: 5rem;
-}
+  }
 
-.pastries-list li {
+  .pastries-list li {
     display: grid;
     grid-template-columns: 2fr 0.8fr;
     gap: 0.7rem;
-}
+  }
 
-.pastries-list form {
+  .pastries-list form {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.pastries-list input[type=number] {
+  .pastries-list input[type="number"] {
     width: 4rem;
     font-family: "Alex Brush", cursive;
     color: #545454;
@@ -46,36 +132,36 @@
     border-bottom: 1px dotted #545454;
     text-align: center;
     font-size: 1.5rem;
-}
-.pastries-list input:focus {
-    outline: none;
-    border: 1px solid #D20F3E;
   }
-.pastries-list input[type=number]::-webkit-inner-spin-button { 
+  .pastries-list input:focus {
+    outline: none;
+    border: 1px solid #d20f3e;
+  }
+  .pastries-list input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    background-image: url('../assets/arrows.png');
+    background-image: url("../assets/arrows.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    cursor:pointer;
-    display:block;
-    width:8px;
+    cursor: pointer;
+    display: block;
+    width: 8px;
     color: #333;
-    text-align:center;
-    position:relative;
-}    
+    text-align: center;
+    position: relative;
+  }
 
-.pastries-list .add-btn {
-    font-family: 'Della-Robia';
-    color: #FFFAF0;
-    background-color: #D20F3E;
+  .pastries-list .add-btn {
+    font-family: "Della-Robia";
+    color: #fffaf0;
+    background-color: #d20f3e;
     border: none;
-    font-size: 0.5rem;
     margin-left: 1.5rem;
     padding: 0.5rem;
     border-radius: 1rem;
-    font-size: 0.8rem;
-}
-.pastries-list .add-btn:hover {
+    font-size: 0.7rem;
+  }
+  .pastries-list .add-btn:hover {
     background-color: #c84f6b;
+  }
 }
