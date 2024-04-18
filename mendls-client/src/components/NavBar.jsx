@@ -7,12 +7,18 @@ import { Link as ScrollLink } from "react-scroll/modules";
 import { useEffect, useState } from "react";
 import monochrome from "../assets/monochrome.png";
 
-export default function NavBar({ setIsBasketVisible, basket, location }) {
+export default function NavBar({
+  setIsBasketVisible,
+  basket,
+  location,
+  isShopActive,
+  shopActive,
+  shopInactive,
+}) {
   const [background, setBackground] = useState({
     backgroundColor: "transparent",
   });
   const [footerIsVisible, setFooterIsVisible] = useState("hidden");
-  const [isShopActive, setIsShopActive] = useState(false);
 
   function scrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -49,14 +55,6 @@ export default function NavBar({ setIsBasketVisible, basket, location }) {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
-
-  function handleShopActive() {
-    setIsShopActive(true);
-  }
-
-  function handleShopInactive() {
-    setIsShopActive(false);
-  }
 
   useEffect(() => {
     {
@@ -96,20 +94,19 @@ export default function NavBar({ setIsBasketVisible, basket, location }) {
           activeClass={isShopActive}
           to="shop"
           spy={true}
-          onSetActive={handleShopActive}
-          onSetInactive={handleShopInactive}
+          onSetActive={shopActive}
+          onSetInactive={shopInactive}
           className="link"
           visibility={footerIsVisible}
-          hashSpy={true}
-          onClick={() => {
-            console.log("clicking");
-          }}
         >
           SHOP
         </ScrollLink>
-        <LinkRouter to="/about" className="link">
+        {/* <LinkRouter to="/about" className="link" onClick={shopInactive}>
           ABOUT
-        </LinkRouter>
+        </LinkRouter> */}
+        <ScrollLink to="about" className="link" onClick={shopInactive}>
+          ABOUT
+        </ScrollLink>
         <div>
           <div style={{ position: "relative" }}>
             <img

@@ -24,6 +24,15 @@ function App() {
   const [isBasketVisible, setIsBasketVisible] = useState(false);
   const location = useLocation();
   const drawerWidth = useWindowWidth().width > 748 ? 650 : "90%";
+  const [isShopActive, setIsShopActive] = useState(false);
+
+  function handleShopActive() {
+    setIsShopActive(true);
+  }
+
+  function handleShopInactive() {
+    setIsShopActive(false);
+  }
 
   useEffect(() => {
     Pastries.all().then((pastries) => {
@@ -73,14 +82,16 @@ function App() {
     });
   }
 
-  console.log(location);
-
   return (
     <div>
       <NavBar
         setIsBasketVisible={setIsBasketVisible}
         basket={basket}
         location={location}
+        setIsShopActive={setIsShopActive}
+        isShopActive={isShopActive}
+        shopActive={handleShopActive}
+        shopInactive={handleShopInactive}
       />
       <Routes>
         <Route
@@ -93,11 +104,20 @@ function App() {
                 basket={basket}
                 onBasketChange={addToBasket}
                 footerVisible={location.pathname === "/#shop"}
+                shopInactive={handleShopInactive}
               />
+              <About />
             </>
           }
         />
-        <Route path="/about" element={<About />} />
+        {/* <Route
+          path="/about"
+          element={
+            <>
+              <About />
+            </>
+          }
+        /> */}
         <Route
           path="/success"
           element={<PaymentSuccess resetBasket={setBasket} />}

@@ -10,6 +10,7 @@ export default function PastriesList({
   basket,
   onBasketChange,
   footerVisible,
+  shopInactive,
 }) {
   const [formQuantities, setFormQuantities] = useState({});
   const windowWidth = useWindowWidth().width;
@@ -76,7 +77,12 @@ export default function PastriesList({
           </li>
         ))}
       </ul>
-      <Footer color="#FFC5E8" image={noise} visible={footerVisible} />
+      <Footer
+        color="#FFC5E8"
+        image={noise}
+        visible={footerVisible}
+        shopInactive={shopInactive}
+      />
     </div>
   );
 }
