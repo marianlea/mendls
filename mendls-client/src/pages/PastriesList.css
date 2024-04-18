@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -22,9 +22,9 @@
 .pastries-list ul {
   list-style-type: none;
   border: 2px dotted powderblue;
-  width: 90%;
-  padding: 1rem;
-  margin-bottom: 5rem;
+  width: 95%;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .pastries-list li {
@@ -99,7 +99,6 @@
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    margin-top: 0;
   }
 
   .pastries-list ul {
