@@ -75,13 +75,13 @@
 
 .homepage .box {
   width: 4rem;
-  margin-right: -3rem;
+  margin-right: -2rem;
   margin-top: -1rem;
 }
 
 .homepage .whiskPin {
   width: 8rem;
-  margin-left: -1rem;
+  /* margin-left: -rem; */
 }
 
 .homepage .bowl {
