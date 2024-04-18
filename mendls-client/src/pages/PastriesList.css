@@ -10,6 +10,7 @@
   flex-direction: column;
   margin-bottom: 3rem;
   text-align: center;
+  height: 100vh;
 }
 
 .pastries-list .pastries-title {
@@ -86,8 +87,9 @@
     background-color: #fffaf0;
     background-image: url("../assets/monochrome.png");
     color: #d20f3e; */
-    padding-top: 11rem;
+    padding-top: 8rem;
     text-align: left;
+    height: auto;
     /* display: flex;
     justify-content: center;
     align-items: center;
