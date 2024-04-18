@@ -6,13 +6,13 @@
   color: #d20f3e;
   font-family: "Della-Robia";
   transition: background-color 0.5s ease;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 
 .nav-bar .links {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
   justify-items: center;
   font-family: "Matchbox-Lettre";
@@ -58,7 +58,7 @@
     position: fixed;
     display: grid;
     grid-template-columns: 2fr 1.5fr;
-    padding: 0 1rem;
+    padding: 0 1rem 0 0;
   }
 
   .nav-bar .links {
