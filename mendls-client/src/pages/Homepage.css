@@ -48,6 +48,7 @@
 
 .homepage .whiskCream {
   width: 8rem;
+  margin-left: -2rem;
   margin-top: 1rem;
 }
 
@@ -75,7 +76,7 @@
 .homepage .box {
   width: 4rem;
   margin-right: -2rem;
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 
 .homepage .whiskPin {
@@ -85,7 +86,7 @@
 
 .homepage .bowl {
   width: 8rem;
-  margin-top: -3rem;
+  margin-top: -2rem;
 }
 
 .homepage .store-hours {
