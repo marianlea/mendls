@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: -3rem;
+  /* margin-left: -3rem; */
 }
 
 .homepage .center img {
@@ -31,7 +31,7 @@
 }
 
 .homepage .right {
-  margin-left: -3rem;
+  /* margin-left: -3rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
