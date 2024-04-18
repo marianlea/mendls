@@ -1,33 +1,96 @@
+.checkout {
+  background-color: #ffc5e8;
+  background-image: url("../assets/noise.png");
+  padding-top: 6rem;
+  height: 100vh;
+}
+
+.checkout .checkout-form {
+  width: 90%;
+  font-family: "Della-Robia";
+  padding: 1.5rem;
+  margin: 0 auto;
+  color: #d20f3e;
+  background-color: #dae6e3;
+  margin-bottom: 2rem;
+}
+
+.checkout h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px dotted #d20f3e;
+  padding-bottom: 1rem;
+}
+
+.checkout label {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  text-align: right;
+  color: #545454;
+}
+
+.checkout input {
+  margin-right: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding: 0.2rem;
+  font-family: "Della-Robia";
+  font-size: 0.8rem;
+  border: none;
+  color: #d20f3e;
+  background-color: #fffaf0;
+}
+.checkout input:focus {
+  outline: none;
+  border: 1px solid #d20f3e;
+}
+
+.checkout .name,
+.checkout .contact,
+.checkout .street,
+.checkout .city,
+.checkout .region {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout .btn {
+  margin: 1rem auto 0;
+  text-align: center;
+}
+
+.checkout .continue-btn {
+  background-color: #d20f3e;
+  color: #dae6e3;
+  padding: 5px 1.5rem;
+  border: none;
+  font-size: 0.7rem;
+  border-radius: 1rem;
+  font-family: "Della-Robia";
+}
+
 @media (min-width: 600px) {
-  .checkout {
+  /* .checkout {
     background-color: #ffc5e8;
     background-image: url("../assets/noise.png");
     padding-top: 8rem;
     height: 100vh;
-  }
+  } */
 
   .checkout .checkout-form {
     width: 60%;
-    font-family: "Della-Robia";
+    /* font-family: "Della-Robia";
     padding: 1.5rem;
-    margin: 0 auto;
-    color: #d20f3e;
+    margin: 0 auto; */
+    /* color: #d20f3e;
     background-color: #dae6e3;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; */
   }
 
   .checkout h5 {
     font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    border-bottom: 1px dotted #d20f3e;
-    padding-bottom: 1rem;
-  }
-
-  .checkout label {
-    font-size: 1rem;
-    margin-right: 0.5rem;
-    text-align: right;
-    color: #545454;
   }
 
   .checkout input {
@@ -80,7 +143,7 @@
   }
 
   .checkout .btn {
-    margin: 2rem auto 1rem;
+    margin: 2rem auto 0;
     text-align: center;
   }
 
