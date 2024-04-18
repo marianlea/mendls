@@ -1,6 +1,43 @@
+.contact-page {
+  height: 100vh;
+  background-color: #ffc5e8;
+  background-image: url("../assets/noise.png");
+  font-family: "Della-Robia";
+  color: #d20f3e;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+.contact-page .contact {
+  margin-top: 1rem;
+}
+
+.contact-page img {
+  width: 120px;
+  margin-right: 1rem;
+}
+.contact-page span {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.contact-page p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-page .hours {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 600px) {
   .contact-page {
-    height: 100vh;
+    /* height: 100vh;
     background-color: #ffc5e8;
     background-image: url("../assets/noise.png");
     font-family: "Della-Robia";
@@ -9,9 +46,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 1px;
+    letter-spacing: 1px; */
+    flex-direction: row;
   }
 
+  .contact-page .contact {
+    margin-top: 0;
+  }
+  /* 
   .contact-page img {
     width: 120px;
     margin-right: 1rem;
@@ -29,5 +71,5 @@
 
   .contact-page .hours {
     margin-bottom: 1rem;
-  }
+  } */
 }

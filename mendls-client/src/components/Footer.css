@@ -1,3 +1,23 @@
+.footer {
+  height: 2.5rem;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: start;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
+
+.footer .link {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 0.6rem;
+  color: #d20f3e;
+  margin-right: 10px;
+  font-family: "Della-Robia";
+}
+
 @media (min-width: 600px) {
   .footer {
     height: 4.5rem;
@@ -9,11 +29,6 @@
   }
 
   .footer .link {
-    text-decoration: none;
-    letter-spacing: 2px;
     font-size: 0.8rem;
-    color: #d20f3e;
-    margin-right: 20px;
-    font-family: "Della-Robia";
   }
 }

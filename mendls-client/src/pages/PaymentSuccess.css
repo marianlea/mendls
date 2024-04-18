@@ -1,4 +1,27 @@
-@media (min-width: 600px) {
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffc5e8;
+  background-image: url("../assets/noise.png");
+  font-family: "Della-Robia";
+  text-align: center;
+  height: 100vh;
+  color: #d20f3e;
+  font-size: 1.2rem;
+}
+
+.payment img {
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+
+.payment p {
+  margin-top: 5px;
+}
+
+/* @media (min-width: 600px) {
   .message {
     display: flex;
     align-items: center;
@@ -21,4 +44,4 @@
   .payment p {
     margin-top: 5px;
   }
-}
+} */

@@ -72,12 +72,15 @@
 }
 
 @media (min-width: 600px) {
-  /* .checkout {
-    background-color: #ffc5e8;
+  .checkout {
+    /* background-color: #ffc5e8;
     background-image: url("../assets/noise.png");
-    padding-top: 8rem;
+    padding-top: 8rem; */
     height: 100vh;
-  } */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .checkout .checkout-form {
     width: 60%;
