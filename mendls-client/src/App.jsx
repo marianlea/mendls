@@ -23,7 +23,7 @@ function App() {
   const [basket, setBasket] = useState(savedBasket || []);
   const [isBasketVisible, setIsBasketVisible] = useState(false);
   const location = useLocation();
-  const drawerWidth = useWindowWidth().width > 748 ? 650 : "80%";
+  const drawerWidth = useWindowWidth().width > 748 ? 650 : "90%";
 
   useEffect(() => {
     Pastries.all().then((pastries) => {

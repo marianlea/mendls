@@ -1,31 +1,39 @@
 import PastryItem from "./PastryItem";
-import CancelIcon from '@mui/icons-material/Cancel';
-import './BasketList.css'
-import { Link as LinkRouter } from 'react-router-dom';
+import CancelIcon from "@mui/icons-material/Cancel";
+import "./BasketList.css";
+import { Link as LinkRouter } from "react-router-dom";
+import useWindowWidth from "../helpers/useWindowWidth";
 
-export default function BasketList({ basket, onBasketChange, setIsBasketVisible, removeItemFromBasket }) {
-
+export default function BasketList({
+  basket,
+  onBasketChange,
+  setIsBasketVisible,
+  removeItemFromBasket,
+}) {
   function handleQuantityChange(e, pastry) {
-    onBasketChange({...pastry, quantity: e.target.value})
+    onBasketChange({ ...pastry, quantity: e.target.value });
   }
 
   function handleBasketClose() {
-    setIsBasketVisible(false)
+    setIsBasketVisible(false);
   }
 
   if (basket.length === 0) {
-    return <div className="basket-list">
-      <div onClick={handleBasketClose} className="close-icon-wrapper">
-      <CancelIcon />
+    return (
+      <div className="basket-list">
+        <div onClick={handleBasketClose} className="close-icon-wrapper">
+          <CancelIcon />
+        </div>
+        <p className="empty-basket">Your basket is empty.</p>
       </div>
-      <p className="empty-basket">Your basket is empty.</p>
-      </div>
+    );
   }
+  const windowWidth = useWindowWidth().width;
 
   return (
     <div className="basket-list">
       <div onClick={handleBasketClose} className="close-icon-wrapper">
-      <CancelIcon />
+        <CancelIcon />
       </div>
       <h5 className="your-basket">YOUR BASKET</h5>
       <section className="headers">
@@ -35,49 +43,80 @@ export default function BasketList({ basket, onBasketChange, setIsBasketVisible,
         <h5 className="header-total">TOTAL</h5>
       </section>
       <ul>
-          {basket.map(pastry =>{
-              return !!pastry.quantity && <li key={`${pastry.id}-basket`} className="basket-item" >
-                  <PastryItem  
-                    className="item" 
+        {basket.map((pastry) => {
+          return (
+            !!pastry.quantity && (
+              <li key={`${pastry.id}-basket`} className="basket-item">
+                {windowWidth > 748 ? (
+                  <PastryItem
+                    className="item"
                     pastry={pastry}
-                    titleSize='1.5rem'
-                    imageSize='3.5rem'
-                    spanSize='0.8rem' />
-                  <section className="form">
-                    <input
-                        className="quantity"
-                        type="number"
-                        defaultValue={basket.find(item => item.id === pastry.id)?.quantity || null}
-                        onChange={(e) => handleQuantityChange(e, pastry)}
-                        name="quantity"
-                        min="1"
-                    />
-                    <span className="total">$ {(pastry.quantity * pastry.price).toFixed(2)}</span>
-                    <button className="remove-btn" onClick={() => removeItemFromBasket(pastry)}>remove</button>
-                  </section>
+                    titleSize="1.5rem"
+                    imageSize="3.5rem"
+                    spanSize="0.8rem"
+                  />
+                ) : (
+                  <PastryItem
+                    className="item"
+                    pastry={pastry}
+                    titleSize="1rem"
+                    imageSize="2rem"
+                    spanSize="0.6rem"
+                  />
+                )}
+
+                <section className="form">
+                  <input
+                    className="quantity"
+                    type="number"
+                    defaultValue={
+                      basket.find((item) => item.id === pastry.id)?.quantity ||
+                      null
+                    }
+                    onChange={(e) => handleQuantityChange(e, pastry)}
+                    name="quantity"
+                    min="1"
+                  />
+                  <span className="total">
+                    $ {(pastry.quantity * pastry.price).toFixed(2)}
+                  </span>
+                  <button
+                    className="remove-btn"
+                    onClick={() => removeItemFromBasket(pastry)}
+                  >
+                    remove
+                  </button>
+                </section>
               </li>
-          })}
+            )
+          );
+        })}
       </ul>
       <section className="basket-total">
         <h5>TOTAL</h5>
         <span className="overall-total total-quantity">
           {basket
-                .map(pastry => Number(pastry.quantity))
-                .reduce((totalQuantity, quantity) => totalQuantity + quantity, 0)
-          }
+            .map((pastry) => Number(pastry.quantity))
+            .reduce((totalQuantity, quantity) => totalQuantity + quantity, 0)}
         </span>
-        <span className="overall-total total-amount">$
+        <span className="overall-total total-amount">
+          $
           {basket
-                .map(pastry => Number(pastry.quantity) * Number(pastry.price))
-                .reduce((totalQuantity, quantity) => totalQuantity + quantity, 0)
-                .toFixed(2)
-          }
+            .map((pastry) => Number(pastry.quantity) * Number(pastry.price))
+            .reduce((totalQuantity, quantity) => totalQuantity + quantity, 0)
+            .toFixed(2)}
         </span>
       </section>
       <div className="checkout-basket">
         <p>* delivery flat rate of $6 added at checkout</p>
-        <LinkRouter to='/checkout' className="checkout-btn" onClick={handleBasketClose}>checkout</LinkRouter>
+        <LinkRouter
+          to="/checkout"
+          className="checkout-btn"
+          onClick={handleBasketClose}
+        >
+          checkout
+        </LinkRouter>
       </div>
     </div>
-  )
+  );
 }

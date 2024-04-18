@@ -32,7 +32,93 @@
 }
 
 .basket-list .basket-item {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+}
+
+.basket-list .headers {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.5fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.basket-list .total {
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.basket-list .quantity {
+  width: 2rem;
+  background-color: transparent;
+  text-align: right;
+  font-family: "Della-Robia";
+  border: none;
+  border-bottom: 1px dotted #545454;
+  color: #d20f3e;
+  font-size: 0.8rem;
+}
+.basket-list .quantity:focus {
+  outline: none;
+  border: 1px solid #d20f3e;
+}
+.basket-list .quantity[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background-image: url("../assets/arrows.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  width: 8px;
   text-align: center;
+  position: relative;
+  margin-left: 5px;
+}
+
+.basket-list .remove-btn {
+  margin-left: 10px;
+  background-color: #d20f3e;
+  padding: 5px;
+  font-size: 0.5rem;
+  font-family: "Della-Robia";
+  color: #fffaf0;
+  border-radius: 1rem;
+  border: none;
+}
+
+.basket-list .basket-total {
+  display: grid;
+  grid-template-columns: 2.1fr 0.5fr 1fr;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 4rem;
+  font-size: 1rem;
+}
+
+.basket-list .basket-total h5 {
+  font-family: "Matchbox-Lettre";
+  font-size: 1rem;
+}
+
+.basket-list .checkout-basket {
+  align-items: center;
+  text-align: center;
+}
+
+.basket-list .checkout-basket p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.basket-list .checkout-btn {
+  background-color: #d20f3e;
+  color: #fffaf0;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-family: "Della-Robia";
+  text-decoration: none;
 }
 
 @media (min-width: 600px) {
@@ -72,14 +158,16 @@
   .basket-list .basket-item {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
+    gap: 0;
   }
 
   .basket-list .total {
+    margin-left: -10px;
     font-size: 1.3rem;
   }
 
   .basket-list .quantity {
-    width: 2rem;
+    width: 3rem;
     background-color: transparent;
     text-align: right;
     font-family: "Della-Robia";
@@ -146,17 +234,16 @@
   }
 
   .basket-list .basket-total {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 2.1fr 0.5fr 1fr;
     margin-top: 2rem;
     padding-left: 1rem;
-    margin-bottom: 4rem;
-    font-size: 1.2rem;
+    margin-bottom: 4rem; */
+    font-size: 1.3rem;
   }
 
   .basket-list .basket-total h5 {
-    font-family: "Matchbox-Lettre";
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .basket-list .total-quantity {
